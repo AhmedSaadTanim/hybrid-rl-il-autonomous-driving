@@ -8,23 +8,23 @@ While pure RL struggled to achieve stable performance, hybrid approaches signifi
 
 🎯 Objectives
 
-Train an autonomous driving agent using RL (PPO)
-Compare performance with Imitation Learning (Behavior Cloning)
-Evaluate hybrid RL + IL strategies
-Analyze training stability and performance
-Provide interpretable insights into agent behavior
+Train an autonomous driving agent using RL (PPO).
+Compare performance with Imitation Learning (Behavior Cloning).
+Evaluate hybrid RL + IL strategies.
+Analyze training stability and performance.
+Provide interpretable insights into agent behavior.
 
 🏎️ Environment
 
 Engine: Unity (ML-Agents)
+
 Track: Closed-loop racing environment with checkpoints
-Observations:
-Raycast sensors (obstacle detection)
-Velocity (local x, z)
+
+Observations: Raycast sensors (obstacle detection), 
+Velocity (local x, z), 
 Direction to next checkpoint
-Actions:
-Steering
-Acceleration / Braking
+
+Actions: Steering, Acceleration / Braking
 
 🧠 Methods
 
@@ -50,19 +50,19 @@ RL (%) -	IL (%)
 📊 Experiments
 
 Training Setup
-Total steps: 500,000 per run
+
+Total steps: 500,000 per run, 
 Multiple runs per configuration
-Evaluation metrics:
-Mean reward
-Collision frequency
-Checkpoint completion
+
+Evaluation metrics: Mean reward, Collision frequency, Checkpoint completion
+
 Key Observations
-RL-only training showed slow convergence and instability
-IL-only training lacked generalization
-Hybrid approaches:
-Improved learning speed
-Reduced collision rates
-Produced smoother navigation behavior
+
+1. RL-only training showed slow convergence and instability
+
+2. IL-only training lacked generalization
+
+3. Hybrid approaches: Improved learning speed, Reduced collision rates, Produced smoother navigation behavior
 
 👉 Best performance achieved with high RL + small IL (e.g., 95:5)
 
@@ -95,21 +95,16 @@ Driving smoothness
 
 (Insert video link here)
 
-📂 Project Structure
-
-RL-Hybrid-Autonomous-Driving/
-├── docs/
-├── results/
-├── configs/
-├── scripts/
-├── unity_project/
-└── demo/
 🚀 Future Work
 
-Multi-agent environments
-Generalization across different tracks
-Integration with VR/XR for immersive analysis
-Advanced explainability methods (e.g., LIME-style perturbations)
+* Multi-agent environments
+  
+* Generalization across different tracks
+  
+* Integration with VR/XR for immersive analysis
+  
+* Advanced explainability methods (e.g., LIME-style perturbations)
+  
 🧠 Key Takeaway
 
 Hybrid learning strategies can significantly improve RL performance in complex environments by combining structured guidance (IL) with exploration (RL).
@@ -117,4 +112,4 @@ Hybrid learning strategies can significantly improve RL performance in complex e
 📬 Contact
 
 Ahmed Saad Tanim
-(Unity Developer | AI Enthusiast)
+(Unity Developer | Software Engineer | ahmedsaadtanim@gmail.com)
