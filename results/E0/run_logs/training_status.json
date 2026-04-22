@@ -1,0 +1,38 @@
+{
+    "CarControl": {
+        "checkpoints": [
+            {
+                "steps": 99998,
+                "file_path": "results\\E0\\CarControl\\CarControl-99998.onnx",
+                "reward": 8.515936168482188,
+                "creation_time": 1765091524.3777902,
+                "auxillary_file_paths": [
+                    "results\\E0\\CarControl\\CarControl-99998.pt"
+                ]
+            },
+            {
+                "steps": 133637,
+                "file_path": "results\\E0\\CarControl\\CarControl-133637.onnx",
+                "reward": null,
+                "creation_time": 1765091944.7220237,
+                "auxillary_file_paths": [
+                    "results\\E0\\CarControl\\CarControl-133637.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 133637,
+            "file_path": "results\\E0\\CarControl.onnx",
+            "reward": null,
+            "creation_time": 1765091944.7220237,
+            "auxillary_file_paths": [
+                "results\\E0\\CarControl\\CarControl-133637.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.8.0+cpu"
+    }
+}

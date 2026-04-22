@@ -1,0 +1,29 @@
+{
+    "CarControl": {
+        "checkpoints": [
+            {
+                "steps": 21204,
+                "file_path": "results\\New3\\CarControl\\CarControl-21204.onnx",
+                "reward": null,
+                "creation_time": 1764987873.4268723,
+                "auxillary_file_paths": [
+                    "results\\New3\\CarControl\\CarControl-21204.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 21204,
+            "file_path": "results\\New3\\CarControl.onnx",
+            "reward": null,
+            "creation_time": 1764987873.4268723,
+            "auxillary_file_paths": [
+                "results\\New3\\CarControl\\CarControl-21204.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.8.0+cpu"
+    }
+}
