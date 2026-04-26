@@ -42,10 +42,12 @@ Training from demonstration data
 Different ratios of RL and IL were tested:
 
 RL (%) -	IL (%)
-[70-30, 
-50-50, 
-30-70,
-95-5]
+[70:30, 
+50:50, 
+30:70,
+95:5]
+
+Based on the results, the final validation focuses on RL-only, IL-only, and the best-performing hybrid configuration 95:5
 
 📊 Experiments
 
