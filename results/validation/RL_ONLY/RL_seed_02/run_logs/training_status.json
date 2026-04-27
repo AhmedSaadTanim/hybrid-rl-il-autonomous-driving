@@ -1,0 +1,65 @@
+{
+    "CarControl": {
+        "checkpoints": [
+            {
+                "steps": 199992,
+                "file_path": "results\\RL_seed_02\\CarControl\\CarControl-199992.onnx",
+                "reward": null,
+                "creation_time": 1777291633.946881,
+                "auxillary_file_paths": [
+                    "results\\RL_seed_02\\CarControl\\CarControl-199992.pt"
+                ]
+            },
+            {
+                "steps": 299996,
+                "file_path": "results\\RL_seed_02\\CarControl\\CarControl-299996.onnx",
+                "reward": -69.20419298782944,
+                "creation_time": 1777291893.5802581,
+                "auxillary_file_paths": [
+                    "results\\RL_seed_02\\CarControl\\CarControl-299996.pt"
+                ]
+            },
+            {
+                "steps": 399984,
+                "file_path": "results\\RL_seed_02\\CarControl\\CarControl-399984.onnx",
+                "reward": null,
+                "creation_time": 1777292168.240038,
+                "auxillary_file_paths": [
+                    "results\\RL_seed_02\\CarControl\\CarControl-399984.pt"
+                ]
+            },
+            {
+                "steps": 499958,
+                "file_path": "results\\RL_seed_02\\CarControl\\CarControl-499958.onnx",
+                "reward": null,
+                "creation_time": 1777292443.6775177,
+                "auxillary_file_paths": [
+                    "results\\RL_seed_02\\CarControl\\CarControl-499958.pt"
+                ]
+            },
+            {
+                "steps": 500022,
+                "file_path": "results\\RL_seed_02\\CarControl\\CarControl-500022.onnx",
+                "reward": null,
+                "creation_time": 1777292443.7118227,
+                "auxillary_file_paths": [
+                    "results\\RL_seed_02\\CarControl\\CarControl-500022.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500022,
+            "file_path": "results\\RL_seed_02\\CarControl.onnx",
+            "reward": null,
+            "creation_time": 1777292443.7118227,
+            "auxillary_file_paths": [
+                "results\\RL_seed_02\\CarControl\\CarControl-500022.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.8.0+cpu"
+    }
+}

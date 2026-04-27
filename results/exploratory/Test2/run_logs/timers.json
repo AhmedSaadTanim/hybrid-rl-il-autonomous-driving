@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1751051332",
+        "python_version": "3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:34:40) [MSC v.1927 64 bit (AMD64)]",
+        "command_line_arguments": "G:\\Unity\\Projects\\test 2\\venv\\Scripts\\mlagents-learn --run-id=Test2",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.7.1+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1751051393"
+    },
+    "total": 61.0828206,
+    "count": 1,
+    "self": 0.0019011999999918316,
+    "children": {
+        "run_training.setup": {
+            "total": 0.010969000000000007,
+            "count": 1,
+            "self": 0.010969000000000007
+        },
+        "TrainerController.start_learning": {
+            "total": 61.0699504,
+            "count": 1,
+            "self": 8.420000000342043e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 61.0698448,
+                    "count": 1,
+                    "self": 61.0698448
+                },
+                "TrainerController._save_models": {
+                    "total": 2.1400000001392527e-05,
+                    "count": 1,
+                    "self": 2.1400000001392527e-05
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "CarControl": {
+        "checkpoints": [
+            {
+                "steps": 199955,
+                "file_path": "results\\N8\\CarControl\\CarControl-199955.onnx",
+                "reward": -1073.9799044057727,
+                "creation_time": 1762102603.3601108,
+                "auxillary_file_paths": [
+                    "results\\N8\\CarControl\\CarControl-199955.pt"
+                ]
+            },
+            {
+                "steps": 299954,
+                "file_path": "results\\N8\\CarControl\\CarControl-299954.onnx",
+                "reward": -763.0299365520477,
+                "creation_time": 1762102689.2012467,
+                "auxillary_file_paths": [
+                    "results\\N8\\CarControl\\CarControl-299954.pt"
+                ]
+            },
+            {
+                "steps": 399985,
+                "file_path": "results\\N8\\CarControl\\CarControl-399985.onnx",
+                "reward": -1034.6699132869642,
+                "creation_time": 1762102773.1963158,
+                "auxillary_file_paths": [
+                    "results\\N8\\CarControl\\CarControl-399985.pt"
+                ]
+            },
+            {
+                "steps": 499950,
+                "file_path": "results\\N8\\CarControl\\CarControl-499950.onnx",
+                "reward": -753.0366011752436,
+                "creation_time": 1762102858.9094796,
+                "auxillary_file_paths": [
+                    "results\\N8\\CarControl\\CarControl-499950.pt"
+                ]
+            },
+            {
+                "steps": 500014,
+                "file_path": "results\\N8\\CarControl\\CarControl-500014.onnx",
+                "reward": -753.0366011752436,
+                "creation_time": 1762102858.9364872,
+                "auxillary_file_paths": [
+                    "results\\N8\\CarControl\\CarControl-500014.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500014,
+            "file_path": "results\\N8\\CarControl.onnx",
+            "reward": -753.0366011752436,
+            "creation_time": 1762102858.9364872,
+            "auxillary_file_paths": [
+                "results\\N8\\CarControl\\CarControl-500014.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.8.0+cpu"
+    }
+}

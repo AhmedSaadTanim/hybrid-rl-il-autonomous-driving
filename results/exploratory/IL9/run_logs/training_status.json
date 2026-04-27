@@ -1,0 +1,65 @@
+{
+    "CarControl": {
+        "checkpoints": [
+            {
+                "steps": 199959,
+                "file_path": "results\\IL9\\CarControl\\CarControl-199959.onnx",
+                "reward": null,
+                "creation_time": 1761851055.4617755,
+                "auxillary_file_paths": [
+                    "results\\IL9\\CarControl\\CarControl-199959.pt"
+                ]
+            },
+            {
+                "steps": 299943,
+                "file_path": "results\\IL9\\CarControl\\CarControl-299943.onnx",
+                "reward": null,
+                "creation_time": 1761851111.6792004,
+                "auxillary_file_paths": [
+                    "results\\IL9\\CarControl\\CarControl-299943.pt"
+                ]
+            },
+            {
+                "steps": 399968,
+                "file_path": "results\\IL9\\CarControl\\CarControl-399968.onnx",
+                "reward": null,
+                "creation_time": 1761851167.764448,
+                "auxillary_file_paths": [
+                    "results\\IL9\\CarControl\\CarControl-399968.pt"
+                ]
+            },
+            {
+                "steps": 499958,
+                "file_path": "results\\IL9\\CarControl\\CarControl-499958.onnx",
+                "reward": null,
+                "creation_time": 1761851223.6419675,
+                "auxillary_file_paths": [
+                    "results\\IL9\\CarControl\\CarControl-499958.pt"
+                ]
+            },
+            {
+                "steps": 500470,
+                "file_path": "results\\IL9\\CarControl\\CarControl-500470.onnx",
+                "reward": null,
+                "creation_time": 1761851223.6746917,
+                "auxillary_file_paths": [
+                    "results\\IL9\\CarControl\\CarControl-500470.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500470,
+            "file_path": "results\\IL9\\CarControl.onnx",
+            "reward": null,
+            "creation_time": 1761851223.6746917,
+            "auxillary_file_paths": [
+                "results\\IL9\\CarControl\\CarControl-500470.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.8.0+cpu"
+    }
+}

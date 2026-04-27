@@ -84,11 +84,11 @@ public class TrackCheckpoints : MonoBehaviour
     public void OnGameEndEvent()
     {
         // TRAINING 
-        //EndCarEpisodes();
+        EndCarEpisodes();
         
         // ACTUAL
-        RaceManager.instance.TogglePause(false);
-        StartCoroutine(MessageShowTime());
+        /*RaceManager.instance.TogglePause(false);
+        StartCoroutine(MessageShowTime());*/
     }
 
     public void EndCarEpisodes()
