@@ -1,0 +1,65 @@
+{
+    "CarControl": {
+        "checkpoints": [
+            {
+                "steps": 199992,
+                "file_path": "results\\HYB_99RL_01IL_seed_02\\CarControl\\CarControl-199992.onnx",
+                "reward": null,
+                "creation_time": 1777389280.3500936,
+                "auxillary_file_paths": [
+                    "results\\HYB_99RL_01IL_seed_02\\CarControl\\CarControl-199992.pt"
+                ]
+            },
+            {
+                "steps": 299996,
+                "file_path": "results\\HYB_99RL_01IL_seed_02\\CarControl\\CarControl-299996.onnx",
+                "reward": -67.89530750345439,
+                "creation_time": 1777389496.4619503,
+                "auxillary_file_paths": [
+                    "results\\HYB_99RL_01IL_seed_02\\CarControl\\CarControl-299996.pt"
+                ]
+            },
+            {
+                "steps": 399984,
+                "file_path": "results\\HYB_99RL_01IL_seed_02\\CarControl\\CarControl-399984.onnx",
+                "reward": null,
+                "creation_time": 1777389714.525948,
+                "auxillary_file_paths": [
+                    "results\\HYB_99RL_01IL_seed_02\\CarControl\\CarControl-399984.pt"
+                ]
+            },
+            {
+                "steps": 499956,
+                "file_path": "results\\HYB_99RL_01IL_seed_02\\CarControl\\CarControl-499956.onnx",
+                "reward": 118.37624943264139,
+                "creation_time": 1777389938.2699614,
+                "auxillary_file_paths": [
+                    "results\\HYB_99RL_01IL_seed_02\\CarControl\\CarControl-499956.pt"
+                ]
+            },
+            {
+                "steps": 500340,
+                "file_path": "results\\HYB_99RL_01IL_seed_02\\CarControl\\CarControl-500340.onnx",
+                "reward": 118.37624943264139,
+                "creation_time": 1777389938.3180614,
+                "auxillary_file_paths": [
+                    "results\\HYB_99RL_01IL_seed_02\\CarControl\\CarControl-500340.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500340,
+            "file_path": "results\\HYB_99RL_01IL_seed_02\\CarControl.onnx",
+            "reward": 118.37624943264139,
+            "creation_time": 1777389938.3180614,
+            "auxillary_file_paths": [
+                "results\\HYB_99RL_01IL_seed_02\\CarControl\\CarControl-500340.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.8.0+cpu"
+    }
+}

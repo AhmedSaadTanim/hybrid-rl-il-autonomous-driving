@@ -55,3 +55,42 @@ HYB (99RL + 1IL) seed 01:
 - Pretraining loss decreased rapidly indicating early IL guidance
 - Value loss decreased steadily indicating stable RL learning
 - Demonstrates improved convergence and stability compared to RL-only
+
+HYB (99RL + 1IL) seed 02:
+- Reward improved significantly (~ -500 to +10)
+- Training stable with smooth improvement curve
+- No performance collapse observed
+- Pretraining loss decreased rapidly indicating effective early guidance from demonstrations
+- Value loss decreased steadily indicating stable learning dynamics
+- Performance consistent with seed 01
+
+HYB (99RL + 1IL) seed 03:
+- Agent exhibited abnormal behavior (reverse driving) during training
+- Reward remained low (~ -300 to -450) with no stable improvement
+- Training unstable compared to seed 01 and seed 02
+- Indicates hybrid method still has some seed sensitivity
+
+HYB (99RL + 1IL) seed 04:
+- Reward remained negative (~ -250 to -300) with limited improvement
+- Training unstable with no consistent convergence
+- Pretraining loss decreased indicating imitation learning occurred
+- However, learned behavior did not translate to strong performance
+- Similar failure pattern observed as seed 03
+
+HYB (99RL + 1IL) overall:
+- Achieved highest performance among all methods (positive rewards in some seeds)
+- Demonstrates clear improvement over RL-only and IL-only approaches
+- However, performance remains seed-dependent with some unstable runs (seed 03, 04)
+- Pretraining loss consistently decreased indicating effective use of demonstrations
+- Shows that small IL contribution improves performance but does not fully eliminate instability
+
+Hybrid (95% RL, 5% IL):
+- Initial performance improvement observed during early training
+- However, training became unstable and reward degraded significantly
+- Final performance (~ -300) worse than 99/1 configuration
+- Indicates excessive reliance on imitation reduces policy adaptability
+
+Comparison:
+- 99/1 achieved best performance and stability
+- 95/5 suffered from overfitting to demonstrations
+- Confirms small IL guidance is beneficial, but higher IL influence is detrimental
