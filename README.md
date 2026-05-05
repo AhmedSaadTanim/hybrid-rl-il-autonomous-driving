@@ -10,43 +10,48 @@ A key contribution of this work is a **curriculum-based hybrid learning strategy
 
 ## 🎯 Objectives
 
-- Train an autonomous driving agent using RL (PPO)
-- Evaluate Imitation Learning (Behavioral Cloning)
-- Compare RL, IL, and Hybrid approaches
-- Optimize RL–IL ratios
-- Improve performance using curriculum learning
+* Train an autonomous driving agent using RL (PPO)
+* Evaluate Imitation Learning (Behavioral Cloning)
+* Compare RL, IL, and Hybrid approaches
+* Optimize RL–IL ratios
+* Improve performance using curriculum learning
 
 ---
 
 ## 🏎️ Environment
 
-- Engine: Unity ML-Agents  
-- Track: Closed-loop racing environment  
+* Engine: Unity ML-Agents
+* Track: Closed-loop racing environment
 
 ### Observations
-- Raycast sensors  
-- Velocity (local X, Z)  
-- Direction to next checkpoint  
+
+* Raycast sensors
+* Velocity (local X, Z)
+* Direction to next checkpoint
 
 ### Actions
-- Steering  
-- Acceleration / Braking  
+
+* Steering
+* Acceleration / Braking
 
 ---
 
 ## 🧠 Methods
 
 ### Reinforcement Learning (RL)
-- PPO algorithm  
-- Reward-based learning  
-- Unstable but powerful  
+
+* PPO algorithm
+* Reward-based learning
+* Unstable but powerful
 
 ### Imitation Learning (IL)
-- Behavioral Cloning  
-- Stable but limited generalization  
+
+* Behavioral Cloning
+* Stable but limited generalization
 
 ### Hybrid Learning (RL + IL)
-- Combines exploration + guidance  
+
+* Combines exploration + guidance
 
 ---
 
@@ -55,13 +60,16 @@ A key contribution of this work is a **curriculum-based hybrid learning strategy
 Training was done in **stages**:
 
 1. **Perfect Lap Demo**
-   - Agent learns optimal racing line  
+
+   * Agent learns optimal racing line
 
 2. **Recovery Demo**
-   - Agent learns how to escape stuck states  
+
+   * Agent learns how to escape stuck states
 
 3. **Continued Training**
-   - Combined behaviors into one policy  
+
+   * Combined behaviors into one policy
 
 👉 Final model: **E1**
 
@@ -71,12 +79,13 @@ Training was done in **stages**:
 
 ### 🔥 Level 1 — RL vs IL vs Hybrid
 
-![Cumulative Reward Comparison](results/figures/Cumulative%20Reward%20Comparison%20(RL%20vs%20IL%20vs%20Hybrid).png)
+![Cumulative Reward Comparison](results/figures/Cumulative%20Reward%20Comparison%20\(RL%20vs%20IL%20vs%20Hybrid\).png)
 
 **Observation:**
-- RL → unstable  
-- IL → limited  
-- Hybrid → best balance  
+
+* RL → unstable
+* IL → limited
+* Hybrid → best balance
 
 ---
 
@@ -85,43 +94,97 @@ Training was done in **stages**:
 ![Hybrid Ratio](results/figures/Exploratory%20Hybrid%20Ratio%20Test%2099-1%20vs%2095-5.png)
 
 **Observation:**
-- **99% RL + 1% IL → Best**
-- 95% RL + 5% IL → worse performance  
+
+* **99% RL + 1% IL → Best**
+* 95% RL + 5% IL → worse performance
 
 ---
 
 ### 🏆 Best Model — E1 (Curriculum Learning)
 
 #### Reward Progression
+
 ![E1 Reward](results/figures/E1_reward.png)
 
 #### Episode Length
+
 ![E1 Episode Length](results/figures/E1_Episode%20Length.png)
 
 **Performance:**
-- Stable learning  
-- Smooth driving  
-- Strong recovery behavior  
-- Highest reward (~150)  
+
+* Stable learning
+* Smooth driving
+* Strong recovery behavior
+* Highest reward (~150)
 
 ---
 
 ## 🧪 Key Insights
 
-- RL alone → unstable  
-- IL alone → poor generalization  
-- Hybrid → strong improvement  
-- Curriculum → **major performance boost**  
+* RL alone → unstable
+* IL alone → poor generalization
+* Hybrid → strong improvement
+* Curriculum → **major performance boost**
 
 ---
 
 ## 🔍 Explainability
 
-- Raycast-based perception visualization  
-- Agent decisions influenced by:
-  - Obstacle distance  
-  - Checkpoint direction  
-  - Velocity  
+* Raycast-based perception visualization
+* Agent decisions influenced by:
+
+  * Obstacle distance
+  * Checkpoint direction
+  * Velocity
+
+---
+
+## ▶️ Reproduce Results
+
+### RL-only
+
+```bash
+mlagents-learn configs/rl_only.yaml --run-id=RL_seed_01 --seed=1 --force
+mlagents-learn configs/rl_only.yaml --run-id=RL_seed_02 --seed=2 --force
+mlagents-learn configs/rl_only.yaml --run-id=RL_seed_03 --seed=3 --force
+```
+
+### IL-only
+
+```bash
+mlagents-learn configs/il_only.yaml --run-id=IL_seed_01 --seed=1 --force
+mlagents-learn configs/il_only.yaml --run-id=IL_seed_02 --seed=2 --force
+mlagents-learn configs/il_only.yaml --run-id=IL_seed_03 --seed=3 --force
+```
+
+### Hybrid 99% RL + 1% IL
+
+```bash
+mlagents-learn configs/hybrid_99rl_1il.yaml --run-id=HYB_99RL_01IL_seed_01 --seed=1 --force
+mlagents-learn configs/hybrid_99rl_1il.yaml --run-id=HYB_99RL_01IL_seed_02 --seed=2 --force
+mlagents-learn configs/hybrid_99rl_1il.yaml --run-id=HYB_99RL_01IL_seed_03 --seed=3 --force
+mlagents-learn configs/hybrid_99rl_1il.yaml --run-id=HYB_99RL_01IL_seed_04 --seed=4 --force
+```
+
+### Exploratory Hybrid 95% RL + 5% IL
+
+```bash
+mlagents-learn configs/hybrid_95rl_5il.yaml --run-id=HYB_95RL_05IL_seed_01 --seed=1 --force
+```
+
+### TensorBoard
+
+```bash
+tensorboard --logdir results
+```
+
+Then open:
+
+```
+http://localhost:6006
+```
+
+> Note: Results may vary slightly due to stochastic training behavior.
 
 ---
 
@@ -133,19 +196,19 @@ Training was done in **stages**:
 
 ## 🚀 Future Work
 
-- Multi-track generalization  
-- Better reward shaping  
-- Vision-based learning  
-- Advanced explainability  
+* Multi-track generalization
+* Better reward shaping
+* Vision-based learning
+* Advanced explainability
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Unity ML-Agents  
-- PPO  
-- Behavioral Cloning  
-- C#  
+* Unity ML-Agents
+* PPO
+* Behavioral Cloning
+* C#
 
 ---
 
@@ -157,9 +220,9 @@ Training was done in **stages**:
 
 ## 📬 Contact
 
-Ahmed Saad Tanim  
-Unity Developer | Software Engineer  
-📧 ahmedsaadtanim@gmail.com  
+Ahmed Saad Tanim
+Unity Developer | Software Engineer
+📧 [ahmedsaadtanim@gmail.com](mailto:ahmedsaadtanim@gmail.com)
 
 ---
 
