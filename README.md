@@ -1,117 +1,168 @@
-🧠 Hybrid Reinforcement and Imitation Learning for Autonomous Driving in Simulation
+# 🧠 Curriculum-Based Hybrid Reinforcement and Imitation Learning for Autonomous Driving
 
-📌 Overview
+## 📌 Overview
 
-This project explores the effectiveness of hybrid learning strategies combining Reinforcement Learning (RL) and Imitation Learning (IL) for training autonomous driving agents in a simulated environment built with Unity.
+This project explores autonomous driving using a combination of Reinforcement Learning (RL) and Imitation Learning (IL) in a Unity ML-Agents environment.
 
-While pure RL struggled to achieve stable performance, hybrid approaches significantly improved convergence speed and driving behavior. This project investigates different RL–IL ratios and analyzes their impact on agent performance.
+A key contribution of this work is a **curriculum-based hybrid learning strategy**, which significantly improves performance and robustness.
 
-🎯 Objectives
+---
 
-Train an autonomous driving agent using RL (PPO).
-Compare performance with Imitation Learning (Behavior Cloning).
-Evaluate hybrid RL + IL strategies.
-Analyze training stability and performance.
-Provide interpretable insights into agent behavior.
+## 🎯 Objectives
 
-🏎️ Environment
+- Train an autonomous driving agent using RL (PPO)
+- Evaluate Imitation Learning (Behavioral Cloning)
+- Compare RL, IL, and Hybrid approaches
+- Optimize RL–IL ratios
+- Improve performance using curriculum learning
 
-Engine: Unity (ML-Agents)
+---
 
-Track: Closed-loop racing environment with checkpoints
+## 🏎️ Environment
 
-Observations: Raycast sensors (obstacle detection), 
-Velocity (local x, z), 
-Direction to next checkpoint
+- Engine: Unity ML-Agents  
+- Track: Closed-loop racing environment  
 
-Actions: Steering, Acceleration / Braking
+### Observations
+- Raycast sensors  
+- Velocity (local X, Z)  
+- Direction to next checkpoint  
 
-🧠 Methods
+### Actions
+- Steering  
+- Acceleration / Braking  
 
-1. Reinforcement Learning (RL)
-Algorithm: PPO (Proximal Policy Optimization)
-Reward signals:
-Positive reward for correct checkpoint
-Penalty for wrong direction
-Collision penalties
-2. Imitation Learning (IL)
-Method: Behavior Cloning
-Training from demonstration data
-3. Hybrid Learning (RL + IL)
+---
 
-Different ratios of RL and IL were tested:
+## 🧠 Methods
 
-RL (%) -	IL (%)
-[70:30, 
-50:50, 
-30:70,
-95:5]
+### Reinforcement Learning (RL)
+- PPO algorithm  
+- Reward-based learning  
+- Unstable but powerful  
 
-Based on the results, the final validation focuses on RL-only, IL-only, and the best-performing hybrid configuration 95:5
+### Imitation Learning (IL)
+- Behavioral Cloning  
+- Stable but limited generalization  
 
-📊 Experiments
+### Hybrid Learning (RL + IL)
+- Combines exploration + guidance  
 
-Training Setup
+---
 
-Total steps: 500,000 per run, 
-Multiple runs per configuration
+## 🚀 ⭐ Main Contribution: Curriculum Learning
 
-Evaluation metrics: Mean reward, Collision frequency, Checkpoint completion
+Training was done in **stages**:
 
-Key Observations
+1. **Perfect Lap Demo**
+   - Agent learns optimal racing line  
 
-1. RL-only training showed slow convergence and instability
+2. **Recovery Demo**
+   - Agent learns how to escape stuck states  
 
-2. IL-only training lacked generalization
+3. **Continued Training**
+   - Combined behaviors into one policy  
 
-3. Hybrid approaches: Improved learning speed, Reduced collision rates, Produced smoother navigation behavior
+👉 Final model: **E1**
 
-👉 Best performance achieved with high RL + small IL (e.g., 95:5)
+---
 
-🔍 Explainability
+## 📊 Results
 
-To better understand agent decisions:
+### 🔥 Level 1 — RL vs IL vs Hybrid
 
-Visual Explanation
-Raycast sensors visualized in Unity
-Colors indicate obstacle proximity
-Decision Analysis (Example)
-Action: Turn Left
-Top Influences:
-- Right ray distance (low → obstacle avoidance)
-- Direction to checkpoint (left)
-- Current velocity
+![Cumulative Reward Comparison](results/figures/Cumulative%20Reward%20Comparison%20(RL%20vs%20IL%20vs%20Hybrid).png)
 
-This helps interpret how the agent reacts to its environment.
+**Observation:**
+- RL → unstable  
+- IL → limited  
+- Hybrid → best balance  
 
-📈 Results
+---
 
-Metrics Compared
-Mean reward over time
-Stability of learning
-Driving smoothness
+### ⚙️ Level 2 — Hybrid Optimization (99/1 vs 95/5)
 
-(Insert graphs here)
+![Hybrid Ratio](results/figures/Exploratory%20Hybrid%20Ratio%20Test%2099-1%20vs%2095-5.png)
 
-🎬 Demo
+**Observation:**
+- **99% RL + 1% IL → Best**
+- 95% RL + 5% IL → worse performance  
 
-(Insert video link here)
+---
 
-🚀 Future Work
+### 🏆 Best Model — E1 (Curriculum Learning)
 
-* Multi-agent environments
-  
-* Generalization across different tracks
-  
-* Integration with VR/XR for immersive analysis
-  
-* Advanced explainability methods (e.g., LIME-style perturbations)
-  
-🧠 Key Takeaway
+#### Reward Progression
+![E1 Reward](results/figures/E1_reward.png)
 
-Hybrid learning strategies can significantly improve RL performance in complex environments by combining structured guidance (IL) with exploration (RL).
+#### Episode Length
+![E1 Episode Length](results/figures/E1_Episode%20Length.png)
 
-📬 Contact
+**Performance:**
+- Stable learning  
+- Smooth driving  
+- Strong recovery behavior  
+- Highest reward (~150)  
 
-Ahmed Saad Tanim
-(Unity Developer | Software Engineer | ahmedsaadtanim@gmail.com)
+---
+
+## 🧪 Key Insights
+
+- RL alone → unstable  
+- IL alone → poor generalization  
+- Hybrid → strong improvement  
+- Curriculum → **major performance boost**  
+
+---
+
+## 🔍 Explainability
+
+- Raycast-based perception visualization  
+- Agent decisions influenced by:
+  - Obstacle distance  
+  - Checkpoint direction  
+  - Velocity  
+
+---
+
+## 🎬 Demo
+
+*(Add video here)*
+
+---
+
+## 🚀 Future Work
+
+- Multi-track generalization  
+- Better reward shaping  
+- Vision-based learning  
+- Advanced explainability  
+
+---
+
+## 🛠️ Tech Stack
+
+- Unity ML-Agents  
+- PPO  
+- Behavioral Cloning  
+- C#  
+
+---
+
+## 🧠 Key Takeaway
+
+> Hybrid learning improves performance — but **curriculum learning makes it robust and practical**.
+
+---
+
+## 📬 Contact
+
+Ahmed Saad Tanim  
+Unity Developer | Software Engineer  
+📧 ahmedsaadtanim@gmail.com  
+
+---
+
+## ⭐ Final Note
+
+> The best model (E1) was achieved through **structured curriculum training**, not just hybrid learning.
